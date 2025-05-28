@@ -1,0 +1,29 @@
+import React from 'react';
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state sehingga render berikutnya akan menampilkan UI fallback.
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // Kamu juga bisa mencatat error ke layanan pelaporan error
+    console.error("Terjadi error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Kamu bisa render UI fallback kustom di sini
+      return <p>Terjadi kesalahan!</p>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
