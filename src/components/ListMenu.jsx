@@ -5,6 +5,7 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 import { AiOutlineOrderedList } from "react-icons/ai";
 import { MdDashboard } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { MdFastfood } from "react-icons/md";
 
 export default function ListMenu() {
     const menuClass = ({ isActive }) =>
@@ -85,6 +86,16 @@ export default function ListMenu() {
           >
             <BiErrorAlt className="mr-4 text-xl"/>
             Error403
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            id="menu-7"
+            to="/products"
+            className={menuClass}
+        >
+            <MdFastfood className="mr-4 text-xl" />
+            Products
           </NavLink>
         </li>
       </ul>
