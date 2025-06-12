@@ -4,7 +4,8 @@ import { useState } from "react"
 import axios from "axios"
 import { BsFillExclamationDiamondFill } from "react-icons/bs"
 import { useEffect } from "react"
-import Link from "react-router-dom"
+import { Link } from "react-router-dom"
+// import { Link, useNavigate, useParams } from 'react-router-dom';
 
 export default function Products() {
     const breadcrumb = ["Dashboard", "Product List"]

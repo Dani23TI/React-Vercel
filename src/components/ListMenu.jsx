@@ -1,3 +1,4 @@
+import { CgNotes } from "react-icons/cg"; 
 import { AiOutlineUserAdd } from "react-icons/ai"; 
 import { BiErrorAlt } from "react-icons/bi"; 
 import React from "react";
@@ -96,6 +97,16 @@ export default function ListMenu() {
         >
             <MdFastfood className="mr-4 text-xl" />
             Products
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            id="menu-8"
+            to="/notes"
+            className={menuClass}
+        >
+            <CgNotes className="mr-4 text-xl" />
+            Notes
           </NavLink>
         </li>
       </ul>
